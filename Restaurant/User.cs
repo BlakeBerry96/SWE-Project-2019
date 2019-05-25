@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Restaurant {
-    public enum UserType {
+    internal enum UserType {
         None,
         Busboy,
         Cook,
@@ -14,7 +14,7 @@ namespace Restaurant {
         Waiter
     }
 
-    public class User {
+    internal class User {
         public string username, firstName, lastName;
         public UserType type;
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    public partial class Manager_Form : Form {
+    internal partial class Manager_Form : Form {
         User user;
         Busboy_Form busboy;
         Cook_Form cook;
@@ -18,7 +18,7 @@ namespace Restaurant {
         Add_Form add;
         Remove_Form remove;
 
-        public Manager_Form(User manager) {
+        internal Manager_Form(User manager) {
             user = manager;
             InitializeComponent();
             this.Text = Helper.TitleText("Manager", user);

@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    public partial class Waiter_Form : Form {
+    internal partial class Waiter_Form : Form {
         User user;
         Button lastClicked = null;
         string lastOrder = null;
         Clockout_Popup clock;
 
-        public Waiter_Form(User waiter) {
+        internal Waiter_Form(User waiter) {
             user = waiter;
             InitializeComponent();
             Comfirm_Label.ForeColor = Color.Green;

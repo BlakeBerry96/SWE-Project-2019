@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    public partial class Host_Form : Form {
+    internal partial class Host_Form : Form {
         Button lastClicked = null;
         Table lastChanged;
         string lastSelected = null;
         User user;
         Dictionary<string, Waiter> waiters = null;
 
-        public Host_Form(User waiter) {
+        internal Host_Form(User waiter) {
             user = waiter;
             InitializeComponent();
             backgroundWorker.RunWorkerAsync();

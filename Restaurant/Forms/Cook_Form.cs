@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    public partial class Cook_Form : Form {
+    internal partial class Cook_Form : Form {
         User user;
         string lastSelected = null;
         Order lastChanged = null;
         Dictionary<string, Order> orders = null;
 
-        public Cook_Form(User cook) {
+        internal Cook_Form(User cook) {
             user = cook;
             InitializeComponent();
             this.Text = Helper.TitleText("Cook", user);

@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    public partial class Clockout_Popup : Form {
+    internal partial class Clockout_Popup : Form {
         User user;
 
-        public Clockout_Popup(User waiter) {
+        internal Clockout_Popup(User waiter) {
             user = waiter;
             InitializeComponent();
         }

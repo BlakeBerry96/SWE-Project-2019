@@ -8,19 +8,19 @@ using System.Windows.Forms;
 
 namespace Restaurant {
     static class Helper {
-        public static string TitleText(string formName, User employee) {
+        internal static string TitleText(string formName, User employee) {
             return formName + ": " + employee.firstName + " " + employee.lastName;
         }
 
-        public static string GetTableKey(int tableNum) {
+        internal static string GetTableKey(int tableNum) {
             return "Table_" + tableNum.ToString();
         }
 
-        public static string GetOrderKey(int orderNum) {
+        internal static string GetOrderKey(int orderNum) {
             return "Order_" + orderNum.ToString();
         }
 
-        public static void SetButton(Button button, string status, string testStatus, Color trueColor, Color falseColor) {
+        internal static void SetButton(Button button, string status, string testStatus, Color trueColor, Color falseColor) {
             if (status == testStatus) {
                 button.BackColor = trueColor;
                 button.ForeColor = Color.White;
@@ -41,13 +41,13 @@ namespace Restaurant {
             return b;
         }
 
-        public static int GetTableNumber(Button button) {
+        internal static int GetTableNumber(Button button) {
             int t = 9;
             Int32.TryParse(button.Text.Substring(button.Text.Length - 1), out t);
             return t;
         }
 
-        public static async Task<Table> SetTableStatus(int table_num, string status) {
+        internal static async Task<Table> SetTableStatus(int table_num, string status) {
             var old = await Firebase.GetAsync<Table>("Tables", "Table_" + table_num.ToString());
             var temp = new Table() {
                 assigned_waiter = old.assigned_waiter,
@@ -60,7 +60,7 @@ namespace Restaurant {
             return old;
         }
 
-        public static async Task<Table> SetTableStatus(int table_num, string status, string waiter) {
+        internal static async Task<Table> SetTableStatus(int table_num, string status, string waiter) {
             var old = await Firebase.GetAsync<Table>("Tables", "Table_" + table_num.ToString());
             var temp = new Table() {
                 assigned_waiter = waiter,

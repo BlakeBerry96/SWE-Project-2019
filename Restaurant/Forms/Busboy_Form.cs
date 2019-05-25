@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    public partial class Busboy_Form : Form {
+    internal partial class Busboy_Form : Form {
         Button lastClicked = null;
         Table lastChanged;
         User user;
 
-        public Busboy_Form(User busboy) {
+        internal Busboy_Form(User busboy) {
             user = busboy;
             InitializeComponent();
             this.Text = Helper.TitleText("Busboy", user);
