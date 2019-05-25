@@ -1,5 +1,5 @@
 ﻿namespace Restaurant {
-    partial class Clockout_Popup {
+    partial class ClockoutPopup {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clockout_Popup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClockoutPopup));
             this.Time_Box = new System.Windows.Forms.ComboBox();
             this.Header_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -120,7 +120,7 @@
             this.Set_Button.TabIndex = 6;
             this.Set_Button.Text = "Set";
             this.Set_Button.UseVisualStyleBackColor = true;
-            this.Set_Button.Click += new System.EventHandler(this.Set_Button_ClickAsync);
+            this.Set_Button.Click += new System.EventHandler(this.SetClickAsync);
             // 
             // Clockout_Popup
             // 

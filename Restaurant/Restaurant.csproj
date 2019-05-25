@@ -115,91 +115,91 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiKeys.cs" />
-    <Compile Include="Forms\Add_Form.cs">
+    <Compile Include="Helpers\ApiKeys.cs" />
+    <Compile Include="Forms\AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Add_Form.Designer.cs">
-      <DependentUpon>Add_Form.cs</DependentUpon>
+    <Compile Include="Forms\AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Clockout_Popup.cs">
+    <Compile Include="Forms\ClockoutPopup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Clockout_Popup.Designer.cs">
-      <DependentUpon>Clockout_Popup.cs</DependentUpon>
+    <Compile Include="Forms\ClockoutPopup.Designer.cs">
+      <DependentUpon>ClockoutPopup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Firebase.cs" />
-    <Compile Include="Forms\Busboy_Form.cs">
+    <Compile Include="Helpers\Firebase.cs" />
+    <Compile Include="Forms\BusboyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Busboy_Form.Designer.cs">
-      <DependentUpon>Busboy_Form.cs</DependentUpon>
+    <Compile Include="Forms\BusboyForm.Designer.cs">
+      <DependentUpon>BusboyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Cook_Form.cs">
+    <Compile Include="Forms\CookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Cook_Form.Designer.cs">
-      <DependentUpon>Cook_Form.cs</DependentUpon>
+    <Compile Include="Forms\CookForm.Designer.cs">
+      <DependentUpon>CookForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
-    <Compile Include="Helper.cs" />
-    <Compile Include="Forms\Manager_Form.cs">
+    <Compile Include="Helpers\User.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Forms\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Manager_Form.Designer.cs">
-      <DependentUpon>Manager_Form.cs</DependentUpon>
+    <Compile Include="Forms\ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Remove_Form.cs">
+    <Compile Include="Forms\RemoveForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Remove_Form.Designer.cs">
-      <DependentUpon>Remove_Form.cs</DependentUpon>
+    <Compile Include="Forms\RemoveForm.Designer.cs">
+      <DependentUpon>RemoveForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataTypes.cs" />
-    <Compile Include="Hash.cs" />
-    <Compile Include="Forms\Login_Form.cs">
+    <Compile Include="Helpers\DataTypes.cs" />
+    <Compile Include="Helpers\Hash.cs" />
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Login_Form.Designer.cs">
-      <DependentUpon>Login_Form.cs</DependentUpon>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\Host_Form.cs">
+    <Compile Include="Forms\HostForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Host_Form.Designer.cs">
-      <DependentUpon>Host_Form.cs</DependentUpon>
+    <Compile Include="Forms\HostForm.Designer.cs">
+      <DependentUpon>HostForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Waiter_Form.cs">
+    <Compile Include="Forms\WaiterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Waiter_Form.Designer.cs">
-      <DependentUpon>Waiter_Form.cs</DependentUpon>
+    <Compile Include="Forms\WaiterForm.Designer.cs">
+      <DependentUpon>WaiterForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Add_Form.resx">
-      <DependentUpon>Add_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Clockout_Popup.resx">
-      <DependentUpon>Clockout_Popup.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ClockoutPopup.resx">
+      <DependentUpon>ClockoutPopup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Busboy_Form.resx">
-      <DependentUpon>Busboy_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\BusboyForm.resx">
+      <DependentUpon>BusboyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cook_Form.resx">
-      <DependentUpon>Cook_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CookForm.resx">
+      <DependentUpon>CookForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login_Form.resx">
-      <DependentUpon>Login_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Remove_Form.resx">
-      <DependentUpon>Remove_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RemoveForm.resx">
+      <DependentUpon>RemoveForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Waiter_Form.resx">
-      <DependentUpon>Waiter_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\WaiterForm.resx">
+      <DependentUpon>WaiterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Manager_Form.resx">
-      <DependentUpon>Manager_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -211,8 +211,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Forms\Host_Form.resx">
-      <DependentUpon>Host_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\HostForm.resx">
+      <DependentUpon>HostForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -245,6 +245,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

@@ -1,5 +1,5 @@
 ﻿namespace Restaurant {
-    partial class Manager_Form {
+    partial class ManagerForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,11 +38,11 @@
             this.Refresh_Button = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Order_Textbox = new System.Windows.Forms.RichTextBox();
+            this.orderTextbox = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.Order_Status_Label = new System.Windows.Forms.Label();
-            this.Order_Num_Label = new System.Windows.Forms.Label();
-            this.Order_List = new System.Windows.Forms.ListBox();
+            this.orderStatusLabel = new System.Windows.Forms.Label();
+            this.orderNumLabel = new System.Windows.Forms.Label();
+            this.orderList = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.Reset_Button = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -80,14 +80,14 @@
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.addToolStripMenuItem.Text = "Add...";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.Open_Add);
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.openAdd);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.removeToolStripMenuItem.Text = "Remove...";
-            this.removeToolStripMenuItem.Click += new System.EventHandler(this.Open_Remove);
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.openRemove);
             // 
             // LogoutToolStripMenuItem
             // 
@@ -95,7 +95,7 @@
             this.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem";
             this.LogoutToolStripMenuItem.Size = new System.Drawing.Size(71, 25);
             this.LogoutToolStripMenuItem.Text = "Logout";
-            this.LogoutToolStripMenuItem.Click += new System.EventHandler(this.Logout_Click);
+            this.LogoutToolStripMenuItem.Click += new System.EventHandler(this.logoutClick);
             // 
             // openAsToolStripMenuItem
             // 
@@ -113,28 +113,28 @@
             this.busboyToolStripMenuItem.Name = "busboyToolStripMenuItem";
             this.busboyToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.busboyToolStripMenuItem.Text = "Busboy";
-            this.busboyToolStripMenuItem.Click += new System.EventHandler(this.Open_Busboy);
+            this.busboyToolStripMenuItem.Click += new System.EventHandler(this.openBusboy);
             // 
             // cookToolStripMenuItem
             // 
             this.cookToolStripMenuItem.Name = "cookToolStripMenuItem";
             this.cookToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.cookToolStripMenuItem.Text = "Cook";
-            this.cookToolStripMenuItem.Click += new System.EventHandler(this.Open_Cook);
+            this.cookToolStripMenuItem.Click += new System.EventHandler(this.openCook);
             // 
             // hostToolStripMenuItem
             // 
             this.hostToolStripMenuItem.Name = "hostToolStripMenuItem";
             this.hostToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.hostToolStripMenuItem.Text = "Host";
-            this.hostToolStripMenuItem.Click += new System.EventHandler(this.Open_Host);
+            this.hostToolStripMenuItem.Click += new System.EventHandler(this.openHost);
             // 
             // waiterToolStripMenuItem
             // 
             this.waiterToolStripMenuItem.Name = "waiterToolStripMenuItem";
             this.waiterToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.waiterToolStripMenuItem.Text = "Waiter";
-            this.waiterToolStripMenuItem.Click += new System.EventHandler(this.Open_Waiter);
+            this.waiterToolStripMenuItem.Click += new System.EventHandler(this.openWaiter);
             // 
             // tableLayoutPanel4
             // 
@@ -166,7 +166,7 @@
             this.Refresh_Button.TabStop = false;
             this.Refresh_Button.Text = "Refresh";
             this.Refresh_Button.UseVisualStyleBackColor = true;
-            this.Refresh_Button.Click += new System.EventHandler(this.Refresh_Click);
+            this.Refresh_Button.Click += new System.EventHandler(this.refreshClick);
             // 
             // tableLayoutPanel1
             // 
@@ -177,7 +177,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Order_List, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.orderList, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 64);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -193,7 +193,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.Order_Textbox, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.orderTextbox, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(249, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -205,17 +205,17 @@
             // 
             // Order_Textbox
             // 
-            this.Order_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.orderTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Order_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_Textbox.Location = new System.Drawing.Point(5, 45);
-            this.Order_Textbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 3);
-            this.Order_Textbox.Name = "Order_Textbox";
-            this.Order_Textbox.ReadOnly = true;
-            this.Order_Textbox.Size = new System.Drawing.Size(558, 261);
-            this.Order_Textbox.TabIndex = 1;
-            this.Order_Textbox.Text = "";
+            this.orderTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderTextbox.Location = new System.Drawing.Point(5, 45);
+            this.orderTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 3);
+            this.orderTextbox.Name = "Order_Textbox";
+            this.orderTextbox.ReadOnly = true;
+            this.orderTextbox.Size = new System.Drawing.Size(558, 261);
+            this.orderTextbox.TabIndex = 1;
+            this.orderTextbox.Text = "";
             // 
             // tableLayoutPanel3
             // 
@@ -225,8 +225,8 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.Order_Status_Label, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.Order_Num_Label, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.orderStatusLabel, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.orderNumLabel, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
@@ -237,46 +237,46 @@
             // 
             // Order_Status_Label
             // 
-            this.Order_Status_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.orderStatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Order_Status_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_Status_Label.Location = new System.Drawing.Point(286, 5);
-            this.Order_Status_Label.Margin = new System.Windows.Forms.Padding(5);
-            this.Order_Status_Label.Name = "Order_Status_Label";
-            this.Order_Status_Label.Size = new System.Drawing.Size(271, 24);
-            this.Order_Status_Label.TabIndex = 1;
-            this.Order_Status_Label.Text = "Status";
-            this.Order_Status_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.orderStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderStatusLabel.Location = new System.Drawing.Point(286, 5);
+            this.orderStatusLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.orderStatusLabel.Name = "Order_Status_Label";
+            this.orderStatusLabel.Size = new System.Drawing.Size(271, 24);
+            this.orderStatusLabel.TabIndex = 1;
+            this.orderStatusLabel.Text = "Status";
+            this.orderStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Order_Num_Label
             // 
-            this.Order_Num_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.orderNumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Order_Num_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_Num_Label.Location = new System.Drawing.Point(5, 5);
-            this.Order_Num_Label.Margin = new System.Windows.Forms.Padding(5);
-            this.Order_Num_Label.Name = "Order_Num_Label";
-            this.Order_Num_Label.Size = new System.Drawing.Size(271, 24);
-            this.Order_Num_Label.TabIndex = 0;
-            this.Order_Num_Label.Text = "Order";
-            this.Order_Num_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.orderNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderNumLabel.Location = new System.Drawing.Point(5, 5);
+            this.orderNumLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.orderNumLabel.Name = "Order_Num_Label";
+            this.orderNumLabel.Size = new System.Drawing.Size(271, 24);
+            this.orderNumLabel.TabIndex = 0;
+            this.orderNumLabel.Text = "Order";
+            this.orderNumLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Order_List
             // 
-            this.Order_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.orderList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Order_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_List.FormattingEnabled = true;
-            this.Order_List.ItemHeight = 20;
-            this.Order_List.Location = new System.Drawing.Point(5, 5);
-            this.Order_List.Margin = new System.Windows.Forms.Padding(5, 5, 5, 2);
-            this.Order_List.Name = "Order_List";
-            this.Order_List.Size = new System.Drawing.Size(236, 304);
-            this.Order_List.TabIndex = 6;
-            this.Order_List.SelectedIndexChanged += new System.EventHandler(this.Order_List_Click);
+            this.orderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderList.FormattingEnabled = true;
+            this.orderList.ItemHeight = 20;
+            this.orderList.Location = new System.Drawing.Point(5, 5);
+            this.orderList.Margin = new System.Windows.Forms.Padding(5, 5, 5, 2);
+            this.orderList.Name = "Order_List";
+            this.orderList.Size = new System.Drawing.Size(236, 304);
+            this.orderList.TabIndex = 6;
+            this.orderList.SelectedIndexChanged += new System.EventHandler(this.orderClick);
             // 
             // tableLayoutPanel5
             // 
@@ -309,7 +309,7 @@
             this.Reset_Button.TabStop = false;
             this.Reset_Button.Text = "Reset Tables";
             this.Reset_Button.UseVisualStyleBackColor = true;
-            this.Reset_Button.Click += new System.EventHandler(this.Reset_Click);
+            this.Reset_Button.Click += new System.EventHandler(this.resetClick);
             // 
             // Manager_Form
             // 
@@ -326,7 +326,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form_Load);
+            this.Load += new System.EventHandler(this.formLoad);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -355,11 +355,11 @@
         private System.Windows.Forms.Button Refresh_Button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.RichTextBox Order_Textbox;
+        private System.Windows.Forms.RichTextBox orderTextbox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label Order_Status_Label;
-        private System.Windows.Forms.Label Order_Num_Label;
-        private System.Windows.Forms.ListBox Order_List;
+        private System.Windows.Forms.Label orderStatusLabel;
+        private System.Windows.Forms.Label orderNumLabel;
+        private System.Windows.Forms.ListBox orderList;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button Reset_Button;
     }

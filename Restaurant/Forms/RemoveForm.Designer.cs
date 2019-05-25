@@ -1,5 +1,5 @@
 ﻿namespace Restaurant {
-    partial class Remove_Form {
+    partial class RemoveForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Remove_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveForm));
             this.label1 = new System.Windows.Forms.Label();
             this.Header_Label = new System.Windows.Forms.Label();
             this.Employee_Box = new System.Windows.Forms.ComboBox();
@@ -71,7 +71,7 @@
             this.Confirm_Button.TabIndex = 9;
             this.Confirm_Button.Text = "Confirm";
             this.Confirm_Button.UseVisualStyleBackColor = true;
-            this.Confirm_Button.Click += new System.EventHandler(this.Confirm_Click);
+            this.Confirm_Button.Click += new System.EventHandler(this.confirmClick);
             // 
             // Remove_Form
             // 
@@ -88,7 +88,7 @@
             this.MinimizeBox = false;
             this.Name = "Remove_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Form_Load);
+            this.Load += new System.EventHandler(this.formLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,5 +1,5 @@
 ﻿namespace Restaurant {
-    partial class Add_Form {
+    partial class AddForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,16 +23,16 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddForm));
             this.label1 = new System.Windows.Forms.Label();
             this.Header_Label = new System.Windows.Forms.Label();
-            this.Type_Box = new System.Windows.Forms.ComboBox();
+            this.typeBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Last_Box = new System.Windows.Forms.TextBox();
-            this.First_Box = new System.Windows.Forms.TextBox();
+            this.lastBox = new System.Windows.Forms.TextBox();
+            this.firstBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Pass_Box = new System.Windows.Forms.TextBox();
+            this.passBox = new System.Windows.Forms.TextBox();
             this.Confirm_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -58,21 +58,21 @@
             // 
             // Type_Box
             // 
-            this.Type_Box.DropDownHeight = 200;
-            this.Type_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Type_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Type_Box.FormattingEnabled = true;
-            this.Type_Box.IntegralHeight = false;
-            this.Type_Box.Items.AddRange(new object[] {
+            this.typeBox.DropDownHeight = 200;
+            this.typeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.typeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeBox.FormattingEnabled = true;
+            this.typeBox.IntegralHeight = false;
+            this.typeBox.Items.AddRange(new object[] {
             "Busboy",
             "Cook",
             "Host",
             "Manager",
             "Waiter"});
-            this.Type_Box.Location = new System.Drawing.Point(19, 110);
-            this.Type_Box.Name = "Type_Box";
-            this.Type_Box.Size = new System.Drawing.Size(353, 28);
-            this.Type_Box.TabIndex = 1;
+            this.typeBox.Location = new System.Drawing.Point(19, 110);
+            this.typeBox.Name = "Type_Box";
+            this.typeBox.Size = new System.Drawing.Size(353, 28);
+            this.typeBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -96,19 +96,19 @@
             // 
             // Last_Box
             // 
-            this.Last_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Last_Box.Location = new System.Drawing.Point(19, 214);
-            this.Last_Box.Name = "Last_Box";
-            this.Last_Box.Size = new System.Drawing.Size(353, 26);
-            this.Last_Box.TabIndex = 3;
+            this.lastBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastBox.Location = new System.Drawing.Point(19, 214);
+            this.lastBox.Name = "Last_Box";
+            this.lastBox.Size = new System.Drawing.Size(353, 26);
+            this.lastBox.TabIndex = 3;
             // 
             // First_Box
             // 
-            this.First_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.First_Box.Location = new System.Drawing.Point(19, 162);
-            this.First_Box.Name = "First_Box";
-            this.First_Box.Size = new System.Drawing.Size(353, 26);
-            this.First_Box.TabIndex = 2;
+            this.firstBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstBox.Location = new System.Drawing.Point(19, 162);
+            this.firstBox.Name = "First_Box";
+            this.firstBox.Size = new System.Drawing.Size(353, 26);
+            this.firstBox.TabIndex = 2;
             // 
             // label4
             // 
@@ -122,11 +122,11 @@
             // 
             // Pass_Box
             // 
-            this.Pass_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pass_Box.Location = new System.Drawing.Point(19, 266);
-            this.Pass_Box.Name = "Pass_Box";
-            this.Pass_Box.Size = new System.Drawing.Size(353, 26);
-            this.Pass_Box.TabIndex = 4;
+            this.passBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passBox.Location = new System.Drawing.Point(19, 266);
+            this.passBox.Name = "Pass_Box";
+            this.passBox.Size = new System.Drawing.Size(353, 26);
+            this.passBox.TabIndex = 4;
             // 
             // Confirm_Button
             // 
@@ -137,7 +137,7 @@
             this.Confirm_Button.TabIndex = 5;
             this.Confirm_Button.Text = "Confirm";
             this.Confirm_Button.UseVisualStyleBackColor = true;
-            this.Confirm_Button.Click += new System.EventHandler(this.Confirm_Click);
+            this.Confirm_Button.Click += new System.EventHandler(this.confirmClick);
             // 
             // Add_Form
             // 
@@ -145,15 +145,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.Confirm_Button);
-            this.Controls.Add(this.Pass_Box);
+            this.Controls.Add(this.passBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.First_Box);
-            this.Controls.Add(this.Last_Box);
+            this.Controls.Add(this.firstBox);
+            this.Controls.Add(this.lastBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Header_Label);
-            this.Controls.Add(this.Type_Box);
+            this.Controls.Add(this.typeBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -169,13 +169,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Header_Label;
-        private System.Windows.Forms.ComboBox Type_Box;
+        private System.Windows.Forms.ComboBox typeBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Last_Box;
-        private System.Windows.Forms.TextBox First_Box;
+        private System.Windows.Forms.TextBox lastBox;
+        private System.Windows.Forms.TextBox firstBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Pass_Box;
+        private System.Windows.Forms.TextBox passBox;
         private System.Windows.Forms.Button Confirm_Button;
     }
 }

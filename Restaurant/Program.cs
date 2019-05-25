@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
@@ -20,23 +17,23 @@ namespace Restaurant {
                     do {
                         user = new User();
 
-                        Application.Run(new Login_Form());
+                        Application.Run(new LoginForm());
 
                         switch (user.type) {
                             case UserType.Busboy:
-                                Application.Run(new Busboy_Form(user));
+                                Application.Run(new BusboyForm(user));
                                 break;
                             case UserType.Cook:
-                                Application.Run(new Cook_Form(user));
+                                Application.Run(new CookForm(user));
                                 break;
                             case UserType.Host:
-                                Application.Run(new Host_Form(user));
+                                Application.Run(new HostForm(user));
                                 break;
                             case UserType.Manager:
-                                Application.Run(new Manager_Form(user));
+                                Application.Run(new ManagerForm(user));
                                 break;
                             case UserType.Waiter:
-                                Application.Run(new Waiter_Form(user));
+                                Application.Run(new WaiterForm(user));
                                 break;
                             default:
                                 break;

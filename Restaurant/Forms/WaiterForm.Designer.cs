@@ -1,5 +1,5 @@
 ﻿namespace Restaurant {
-    partial class Waiter_Form {
+    partial class WaiterForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,15 +23,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Waiter_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WaiterForm));
             this.Waiter_Label = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.Order_Button = new System.Windows.Forms.Button();
-            this.Undo_Button = new System.Windows.Forms.Button();
+            this.undoButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.Logout_Button = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Order_Textbox = new System.Windows.Forms.RichTextBox();
+            this.orderTextbox = new System.Windows.Forms.RichTextBox();
             this.LayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.Table8_Button = new System.Windows.Forms.Button();
             this.Table7_Button = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             this.Table2_Button = new System.Windows.Forms.Button();
             this.Table1_Button = new System.Windows.Forms.Button();
             this.DumbyFocus = new System.Windows.Forms.Label();
-            this.Comfirm_Label = new System.Windows.Forms.Label();
+            this.comfirmLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Left_Button = new System.Windows.Forms.Button();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
@@ -72,7 +72,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
             this.tableLayoutPanel4.Controls.Add(this.Order_Button, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.Undo_Button, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.undoButton, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(575, 392);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(10);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -96,24 +96,24 @@
             this.Order_Button.TabStop = false;
             this.Order_Button.Text = "Order";
             this.Order_Button.UseVisualStyleBackColor = true;
-            this.Order_Button.Click += new System.EventHandler(this.Order_Click);
+            this.Order_Button.Click += new System.EventHandler(this.orderClick);
             // 
             // Undo_Button
             // 
-            this.Undo_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.undoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Undo_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Undo_Button.Location = new System.Drawing.Point(5, 5);
-            this.Undo_Button.Margin = new System.Windows.Forms.Padding(5);
-            this.Undo_Button.Name = "Undo_Button";
-            this.Undo_Button.Padding = new System.Windows.Forms.Padding(10);
-            this.Undo_Button.Size = new System.Drawing.Size(72, 60);
-            this.Undo_Button.TabIndex = 1;
-            this.Undo_Button.TabStop = false;
-            this.Undo_Button.Text = "↶";
-            this.Undo_Button.UseVisualStyleBackColor = true;
-            this.Undo_Button.Click += new System.EventHandler(this.Undo_Click);
+            this.undoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.undoButton.Location = new System.Drawing.Point(5, 5);
+            this.undoButton.Margin = new System.Windows.Forms.Padding(5);
+            this.undoButton.Name = "Undo_Button";
+            this.undoButton.Padding = new System.Windows.Forms.Padding(10);
+            this.undoButton.Size = new System.Drawing.Size(72, 60);
+            this.undoButton.TabIndex = 1;
+            this.undoButton.TabStop = false;
+            this.undoButton.Text = "↶";
+            this.undoButton.UseVisualStyleBackColor = true;
+            this.undoButton.Click += new System.EventHandler(this.undoClick);
             // 
             // tableLayoutPanel3
             // 
@@ -146,7 +146,7 @@
             this.Logout_Button.TabStop = false;
             this.Logout_Button.Text = "Logout";
             this.Logout_Button.UseVisualStyleBackColor = true;
-            this.Logout_Button.Click += new System.EventHandler(this.Logout_Click);
+            this.Logout_Button.Click += new System.EventHandler(this.logoutClick);
             // 
             // tableLayoutPanel1
             // 
@@ -156,7 +156,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.Order_Textbox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.orderTextbox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LayoutPanel, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 67);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -169,16 +169,16 @@
             // 
             // Order_Textbox
             // 
-            this.Order_Textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.orderTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Order_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_Textbox.Location = new System.Drawing.Point(411, 5);
-            this.Order_Textbox.Margin = new System.Windows.Forms.Padding(5);
-            this.Order_Textbox.Name = "Order_Textbox";
-            this.Order_Textbox.Size = new System.Drawing.Size(397, 305);
-            this.Order_Textbox.TabIndex = 5;
-            this.Order_Textbox.Text = "";
+            this.orderTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderTextbox.Location = new System.Drawing.Point(411, 5);
+            this.orderTextbox.Margin = new System.Windows.Forms.Padding(5);
+            this.orderTextbox.Name = "Order_Textbox";
+            this.orderTextbox.Size = new System.Drawing.Size(397, 305);
+            this.orderTextbox.TabIndex = 5;
+            this.orderTextbox.Text = "";
             // 
             // LayoutPanel
             // 
@@ -223,7 +223,7 @@
             this.Table8_Button.TabStop = false;
             this.Table8_Button.Text = "Table 8";
             this.Table8_Button.UseVisualStyleBackColor = true;
-            this.Table8_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table8_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table7_Button
             // 
@@ -240,7 +240,7 @@
             this.Table7_Button.TabStop = false;
             this.Table7_Button.Text = "Table 7";
             this.Table7_Button.UseVisualStyleBackColor = true;
-            this.Table7_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table7_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table6_Button
             // 
@@ -257,7 +257,7 @@
             this.Table6_Button.TabStop = false;
             this.Table6_Button.Text = "Table 6";
             this.Table6_Button.UseVisualStyleBackColor = true;
-            this.Table6_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table6_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table5_Button
             // 
@@ -274,7 +274,7 @@
             this.Table5_Button.TabStop = false;
             this.Table5_Button.Text = "Table 5";
             this.Table5_Button.UseVisualStyleBackColor = true;
-            this.Table5_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table5_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table4_Button
             // 
@@ -291,7 +291,7 @@
             this.Table4_Button.TabStop = false;
             this.Table4_Button.Text = "Table 4";
             this.Table4_Button.UseVisualStyleBackColor = true;
-            this.Table4_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table4_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table3_Button
             // 
@@ -308,7 +308,7 @@
             this.Table3_Button.TabStop = false;
             this.Table3_Button.Text = "Table 3";
             this.Table3_Button.UseVisualStyleBackColor = true;
-            this.Table3_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table3_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table2_Button
             // 
@@ -325,7 +325,7 @@
             this.Table2_Button.TabStop = false;
             this.Table2_Button.Text = "Table 2";
             this.Table2_Button.UseVisualStyleBackColor = true;
-            this.Table2_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table2_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table1_Button
             // 
@@ -342,7 +342,7 @@
             this.Table1_Button.TabStop = false;
             this.Table1_Button.Text = "Table 1";
             this.Table1_Button.UseVisualStyleBackColor = true;
-            this.Table1_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table1_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // DumbyFocus
             // 
@@ -355,14 +355,14 @@
             // 
             // Comfirm_Label
             // 
-            this.Comfirm_Label.AutoSize = true;
-            this.Comfirm_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Comfirm_Label.Location = new System.Drawing.Point(719, 47);
-            this.Comfirm_Label.Name = "Comfirm_Label";
-            this.Comfirm_Label.Size = new System.Drawing.Size(101, 20);
-            this.Comfirm_Label.TabIndex = 13;
-            this.Comfirm_Label.Text = "Order Placed";
-            this.Comfirm_Label.Visible = false;
+            this.comfirmLabel.AutoSize = true;
+            this.comfirmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comfirmLabel.Location = new System.Drawing.Point(719, 47);
+            this.comfirmLabel.Name = "Comfirm_Label";
+            this.comfirmLabel.Size = new System.Drawing.Size(101, 20);
+            this.comfirmLabel.TabIndex = 13;
+            this.comfirmLabel.Text = "Order Placed";
+            this.comfirmLabel.Visible = false;
             // 
             // tableLayoutPanel2
             // 
@@ -395,12 +395,12 @@
             this.Left_Button.TabStop = false;
             this.Left_Button.Text = "Leaving";
             this.Left_Button.UseVisualStyleBackColor = true;
-            this.Left_Button.Click += new System.EventHandler(this.Leaving_Click);
+            this.Left_Button.Click += new System.EventHandler(this.leavingClick);
             // 
             // backgroundWorker
             // 
             this.backgroundWorker.WorkerSupportsCancellation = true;
-            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Background_DoWork);
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundDoWork);
             // 
             // Waiter_Form
             // 
@@ -408,7 +408,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 481);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.Comfirm_Label);
+            this.Controls.Add(this.comfirmLabel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel4);
@@ -420,8 +420,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Waiter";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Closing);
-            this.Load += new System.EventHandler(this.Form_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClosing);
+            this.Load += new System.EventHandler(this.formLoad);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -437,7 +437,7 @@
         private System.Windows.Forms.Label Waiter_Label;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button Order_Button;
-        private System.Windows.Forms.Button Undo_Button;
+        private System.Windows.Forms.Button undoButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button Logout_Button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -450,9 +450,9 @@
         private System.Windows.Forms.Button Table3_Button;
         private System.Windows.Forms.Button Table2_Button;
         private System.Windows.Forms.Button Table1_Button;
-        private System.Windows.Forms.RichTextBox Order_Textbox;
+        private System.Windows.Forms.RichTextBox orderTextbox;
         private System.Windows.Forms.Label DumbyFocus;
-        private System.Windows.Forms.Label Comfirm_Label;
+        private System.Windows.Forms.Label comfirmLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button Left_Button;
         private System.ComponentModel.BackgroundWorker backgroundWorker;

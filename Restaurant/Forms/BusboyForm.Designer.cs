@@ -1,5 +1,5 @@
 ﻿namespace Restaurant {
-    partial class Busboy_Form {
+    partial class BusboyForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,8 +23,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busboy_Form));
-            this.LayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BusboyForm));
+            this.layoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.Table8_Button = new System.Windows.Forms.Button();
             this.Table7_Button = new System.Windows.Forms.Button();
             this.Table6_Button = new System.Windows.Forms.Button();
@@ -35,16 +35,16 @@
             this.Table1_Button = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Clean_Button = new System.Windows.Forms.Button();
-            this.Undo_Button = new System.Windows.Forms.Button();
+            this.undoButton = new System.Windows.Forms.Button();
             this.Busboy_Label = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.Logout_Button = new System.Windows.Forms.Button();
-            this.DumbyFocus = new System.Windows.Forms.Label();
+            this.dumbyFocus = new System.Windows.Forms.Label();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Dirty_Label = new System.Windows.Forms.Label();
-            this.Clean_Label = new System.Windows.Forms.Label();
-            this.LayoutPanel.SuspendLayout();
+            this.dirtyLabel = new System.Windows.Forms.Label();
+            this.cleanLabel = new System.Windows.Forms.Label();
+            this.layoutPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -52,29 +52,29 @@
             // 
             // LayoutPanel
             // 
-            this.LayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.layoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LayoutPanel.ColumnCount = 2;
-            this.LayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.LayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.LayoutPanel.Controls.Add(this.Table8_Button, 1, 3);
-            this.LayoutPanel.Controls.Add(this.Table7_Button, 0, 3);
-            this.LayoutPanel.Controls.Add(this.Table6_Button, 1, 2);
-            this.LayoutPanel.Controls.Add(this.Table5_Button, 0, 2);
-            this.LayoutPanel.Controls.Add(this.Table4_Button, 1, 1);
-            this.LayoutPanel.Controls.Add(this.Table3_Button, 0, 1);
-            this.LayoutPanel.Controls.Add(this.Table2_Button, 1, 0);
-            this.LayoutPanel.Controls.Add(this.Table1_Button, 0, 0);
-            this.LayoutPanel.Location = new System.Drawing.Point(12, 64);
-            this.LayoutPanel.Name = "LayoutPanel";
-            this.LayoutPanel.RowCount = 4;
-            this.LayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.LayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.LayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.LayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.LayoutPanel.Size = new System.Drawing.Size(820, 315);
-            this.LayoutPanel.TabIndex = 0;
+            this.layoutPanel.ColumnCount = 2;
+            this.layoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutPanel.Controls.Add(this.Table8_Button, 1, 3);
+            this.layoutPanel.Controls.Add(this.Table7_Button, 0, 3);
+            this.layoutPanel.Controls.Add(this.Table6_Button, 1, 2);
+            this.layoutPanel.Controls.Add(this.Table5_Button, 0, 2);
+            this.layoutPanel.Controls.Add(this.Table4_Button, 1, 1);
+            this.layoutPanel.Controls.Add(this.Table3_Button, 0, 1);
+            this.layoutPanel.Controls.Add(this.Table2_Button, 1, 0);
+            this.layoutPanel.Controls.Add(this.Table1_Button, 0, 0);
+            this.layoutPanel.Location = new System.Drawing.Point(12, 64);
+            this.layoutPanel.Name = "LayoutPanel";
+            this.layoutPanel.RowCount = 4;
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutPanel.Size = new System.Drawing.Size(820, 315);
+            this.layoutPanel.TabIndex = 0;
             // 
             // Table8_Button
             // 
@@ -91,7 +91,7 @@
             this.Table8_Button.TabStop = false;
             this.Table8_Button.Text = "Table 8";
             this.Table8_Button.UseVisualStyleBackColor = true;
-            this.Table8_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table8_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table7_Button
             // 
@@ -108,7 +108,7 @@
             this.Table7_Button.TabStop = false;
             this.Table7_Button.Text = "Table 7";
             this.Table7_Button.UseVisualStyleBackColor = true;
-            this.Table7_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table7_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table6_Button
             // 
@@ -125,7 +125,7 @@
             this.Table6_Button.TabStop = false;
             this.Table6_Button.Text = "Table 6";
             this.Table6_Button.UseVisualStyleBackColor = true;
-            this.Table6_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table6_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table5_Button
             // 
@@ -142,7 +142,7 @@
             this.Table5_Button.TabStop = false;
             this.Table5_Button.Text = "Table 5";
             this.Table5_Button.UseVisualStyleBackColor = true;
-            this.Table5_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table5_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table4_Button
             // 
@@ -159,7 +159,7 @@
             this.Table4_Button.TabStop = false;
             this.Table4_Button.Text = "Table 4";
             this.Table4_Button.UseVisualStyleBackColor = true;
-            this.Table4_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table4_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table3_Button
             // 
@@ -176,7 +176,7 @@
             this.Table3_Button.TabStop = false;
             this.Table3_Button.Text = "Table 3";
             this.Table3_Button.UseVisualStyleBackColor = true;
-            this.Table3_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table3_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table2_Button
             // 
@@ -193,7 +193,7 @@
             this.Table2_Button.TabStop = false;
             this.Table2_Button.Text = "Table 2";
             this.Table2_Button.UseVisualStyleBackColor = true;
-            this.Table2_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table2_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // Table1_Button
             // 
@@ -210,7 +210,7 @@
             this.Table1_Button.TabStop = false;
             this.Table1_Button.Text = "Table 1";
             this.Table1_Button.UseVisualStyleBackColor = true;
-            this.Table1_Button.Click += new System.EventHandler(this.Table_Click);
+            this.Table1_Button.Click += new System.EventHandler(this.tableClick);
             // 
             // tableLayoutPanel2
             // 
@@ -219,7 +219,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
             this.tableLayoutPanel2.Controls.Add(this.Clean_Button, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Undo_Button, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.undoButton, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(582, 392);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(10);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -243,25 +243,25 @@
             this.Clean_Button.TabStop = false;
             this.Clean_Button.Text = "Clean";
             this.Clean_Button.UseVisualStyleBackColor = true;
-            this.Clean_Button.Click += new System.EventHandler(this.Clean_Click);
+            this.Clean_Button.Click += new System.EventHandler(this.cleanClick);
             // 
             // Undo_Button
             // 
-            this.Undo_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.undoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Undo_Button.Enabled = false;
-            this.Undo_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Undo_Button.Location = new System.Drawing.Point(5, 5);
-            this.Undo_Button.Margin = new System.Windows.Forms.Padding(5);
-            this.Undo_Button.Name = "Undo_Button";
-            this.Undo_Button.Padding = new System.Windows.Forms.Padding(10);
-            this.Undo_Button.Size = new System.Drawing.Size(72, 60);
-            this.Undo_Button.TabIndex = 1;
-            this.Undo_Button.TabStop = false;
-            this.Undo_Button.Text = "↶";
-            this.Undo_Button.UseVisualStyleBackColor = true;
-            this.Undo_Button.Click += new System.EventHandler(this.Undo_Click);
+            this.undoButton.Enabled = false;
+            this.undoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.undoButton.Location = new System.Drawing.Point(5, 5);
+            this.undoButton.Margin = new System.Windows.Forms.Padding(5);
+            this.undoButton.Name = "Undo_Button";
+            this.undoButton.Padding = new System.Windows.Forms.Padding(10);
+            this.undoButton.Size = new System.Drawing.Size(72, 60);
+            this.undoButton.TabIndex = 1;
+            this.undoButton.TabStop = false;
+            this.undoButton.Text = "↶";
+            this.undoButton.UseVisualStyleBackColor = true;
+            this.undoButton.Click += new System.EventHandler(this.undoClick);
             // 
             // Busboy_Label
             // 
@@ -307,22 +307,22 @@
             this.Logout_Button.TabStop = false;
             this.Logout_Button.Text = "Logout";
             this.Logout_Button.UseVisualStyleBackColor = true;
-            this.Logout_Button.Click += new System.EventHandler(this.Logout_Click);
+            this.Logout_Button.Click += new System.EventHandler(this.logoutClick);
             // 
             // DumbyFocus
             // 
-            this.DumbyFocus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.DumbyFocus.AutoSize = true;
-            this.DumbyFocus.Location = new System.Drawing.Point(399, 42);
-            this.DumbyFocus.Name = "DumbyFocus";
-            this.DumbyFocus.Size = new System.Drawing.Size(64, 16);
-            this.DumbyFocus.TabIndex = 0;
-            this.DumbyFocus.Text = "Not Seen";
+            this.dumbyFocus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dumbyFocus.AutoSize = true;
+            this.dumbyFocus.Location = new System.Drawing.Point(399, 42);
+            this.dumbyFocus.Name = "DumbyFocus";
+            this.dumbyFocus.Size = new System.Drawing.Size(64, 16);
+            this.dumbyFocus.TabIndex = 0;
+            this.dumbyFocus.Text = "Not Seen";
             // 
             // backgroundWorker
             // 
             this.backgroundWorker.WorkerSupportsCancellation = true;
-            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Background_DoWork);
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundDoWork);
             // 
             // tableLayoutPanel1
             // 
@@ -330,8 +330,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.Dirty_Label, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Clean_Label, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dirtyLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cleanLabel, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(322, 385);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -342,30 +342,30 @@
             // 
             // Dirty_Label
             // 
-            this.Dirty_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dirtyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dirty_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dirty_Label.Location = new System.Drawing.Point(5, 5);
-            this.Dirty_Label.Margin = new System.Windows.Forms.Padding(5);
-            this.Dirty_Label.Name = "Dirty_Label";
-            this.Dirty_Label.Size = new System.Drawing.Size(90, 40);
-            this.Dirty_Label.TabIndex = 0;
-            this.Dirty_Label.Text = "Dirty";
-            this.Dirty_Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.dirtyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dirtyLabel.Location = new System.Drawing.Point(5, 5);
+            this.dirtyLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.dirtyLabel.Name = "Dirty_Label";
+            this.dirtyLabel.Size = new System.Drawing.Size(90, 40);
+            this.dirtyLabel.TabIndex = 0;
+            this.dirtyLabel.Text = "Dirty";
+            this.dirtyLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Clean_Label
             // 
-            this.Clean_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cleanLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Clean_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clean_Label.Location = new System.Drawing.Point(105, 5);
-            this.Clean_Label.Margin = new System.Windows.Forms.Padding(5);
-            this.Clean_Label.Name = "Clean_Label";
-            this.Clean_Label.Size = new System.Drawing.Size(90, 40);
-            this.Clean_Label.TabIndex = 1;
-            this.Clean_Label.Text = "Clean";
+            this.cleanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cleanLabel.Location = new System.Drawing.Point(105, 5);
+            this.cleanLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.cleanLabel.Name = "Clean_Label";
+            this.cleanLabel.Size = new System.Drawing.Size(90, 40);
+            this.cleanLabel.TabIndex = 1;
+            this.cleanLabel.Text = "Clean";
             // 
             // Busboy_Form
             // 
@@ -375,8 +375,8 @@
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.Busboy_Label);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.LayoutPanel);
-            this.Controls.Add(this.DumbyFocus);
+            this.Controls.Add(this.layoutPanel);
+            this.Controls.Add(this.dumbyFocus);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(860, 520);
@@ -384,8 +384,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busboy";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Closing);
-            this.LayoutPanel.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClosing);
+            this.layoutPanel.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -396,10 +396,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel LayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel layoutPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button Clean_Button;
-        private System.Windows.Forms.Button Undo_Button;
+        private System.Windows.Forms.Button undoButton;
         private System.Windows.Forms.Label Busboy_Label;
         private System.Windows.Forms.Button Table8_Button;
         private System.Windows.Forms.Button Table7_Button;
@@ -411,10 +411,10 @@
         private System.Windows.Forms.Button Table1_Button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button Logout_Button;
-        private System.Windows.Forms.Label DumbyFocus;
+        private System.Windows.Forms.Label dumbyFocus;
         private System.ComponentModel.BackgroundWorker backgroundWorker;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label Dirty_Label;
-        private System.Windows.Forms.Label Clean_Label;
+        private System.Windows.Forms.Label dirtyLabel;
+        private System.Windows.Forms.Label cleanLabel;
     }
 }

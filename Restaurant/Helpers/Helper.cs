@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -50,12 +47,12 @@ namespace Restaurant {
         internal static async Task<Table> SetTableStatus(int table_num, string status) {
             var old = await Firebase.GetAsync<Table>("Tables", "Table_" + table_num.ToString());
             var temp = new Table() {
-                assigned_waiter = old.assigned_waiter,
-                status = status,
-                table_number = old.table_number
+                AssignedWaiter = old.AssignedWaiter,
+                Status = status,
+                TableNumber = old.TableNumber
             };
-            if (status != "occupied" && temp.assigned_waiter != "")
-                temp.assigned_waiter = "";
+            if (status != "occupied" && temp.AssignedWaiter != "")
+                temp.AssignedWaiter = "";
             await Firebase.UpdateAsync<Table>("Tables", "Table_" + table_num.ToString(), temp);
             return old;
         }
@@ -63,12 +60,51 @@ namespace Restaurant {
         internal static async Task<Table> SetTableStatus(int table_num, string status, string waiter) {
             var old = await Firebase.GetAsync<Table>("Tables", "Table_" + table_num.ToString());
             var temp = new Table() {
-                assigned_waiter = waiter,
-                status = status,
-                table_number = old.table_number
+                AssignedWaiter = waiter,
+                Status = status,
+                TableNumber = old.TableNumber
             };
             await Firebase.UpdateAsync<Table>("Tables", "Table_" + table_num.ToString(), temp);
             return old;
+        }
+
+        internal static async Task<User> GetEmployee(string user, string pass) {
+            User employee = new User();
+
+            Employee responce = await Firebase.GetAsync<Employee>("Employees", user);
+
+            if (responce != null && responce.Username.ToLower() == user.ToLower() && responce.PassHash == pass) {
+                employee.firstName = responce.FirstName;
+                employee.lastName = responce.LastName;
+                employee.username = responce.Username;
+
+                string type = responce.UserType.ToLower();
+
+                switch (type) {
+                    case "busboy":
+                        employee.type = UserType.Busboy;
+                        break;
+                    case "cook":
+                        employee.type = UserType.Cook;
+                        break;
+                    case "host":
+                        employee.type = UserType.Host;
+                        break;
+                    case "manager":
+                        employee.type = UserType.Manager;
+                        break;
+                    case "waiter":
+                        employee.type = UserType.Waiter;
+                        break;
+                    default:
+                        employee.type = UserType.None;
+                        break;
+                }
+            } else {
+                employee = new User();
+            }
+
+            return employee;
         }
     }
 }

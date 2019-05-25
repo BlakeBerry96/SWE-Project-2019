@@ -1,5 +1,5 @@
 ﻿namespace Restaurant {
-    partial class Login_Form {
+    partial class LoginForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.Username_TextBox = new System.Windows.Forms.TextBox();
             this.Login_Button = new System.Windows.Forms.Button();
             this.Username_Label = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.Login_Button.TabIndex = 2;
             this.Login_Button.Text = "Login";
             this.Login_Button.UseVisualStyleBackColor = true;
-            this.Login_Button.Click += new System.EventHandler(this.Login_Click);
+            this.Login_Button.Click += new System.EventHandler(this.loginClick);
             // 
             // Username_Label
             // 
@@ -90,7 +90,7 @@
             this.Password_TextBox.PasswordChar = '*';
             this.Password_TextBox.Size = new System.Drawing.Size(360, 26);
             this.Password_TextBox.TabIndex = 1;
-            this.Password_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Pass_Key_Check);
+            this.Password_TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enterKeyPress);
             // 
             // Failed_Label
             // 
