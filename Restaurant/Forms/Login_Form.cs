@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    public partial class Login_Form : Form {
-        public Login_Form() {
+    internal partial class Login_Form : Form {
+        internal Login_Form() {
             InitializeComponent();
             Username_TextBox.Text = Properties.Settings.Default.Last_Login;
         }

@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    public partial class Remove_Form : Form {
-        public Remove_Form() {
+    internal partial class Remove_Form : Form {
+        internal Remove_Form() {
             InitializeComponent();
         }
 

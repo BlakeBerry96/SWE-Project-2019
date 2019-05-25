@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    public partial class Add_Form : Form {
-        public Add_Form() {
+    internal partial class Add_Form : Form {
+        internal Add_Form() {
             InitializeComponent();
         }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
-    static class Helper {
+    internal static class Helper {
         internal static string TitleText(string formName, User employee) {
             return formName + ": " + employee.firstName + " " + employee.lastName;
         }
