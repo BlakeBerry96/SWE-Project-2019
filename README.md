@@ -11,3 +11,10 @@ https://github.com/ziyasal/FireSharp
 
 
 This contains all the files except the ApiKey.cs file. The only things contained in it is the FirebasePath and FirebaseSecret used in the Firebase.cs file.
+
+```
+internal static class ApiKeys {
+        internal const string FirebasePath = "Path";
+        internal const string FirebaseSecret = "Secret";
+}
+```
