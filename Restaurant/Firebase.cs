@@ -12,6 +12,7 @@ using FireSharp.Response;
 
 namespace Restaurant {
     internal static class Firebase {
+        // Needed to run, see README.md
         internal static IFirebaseConfig config = new FirebaseConfig {
             AuthSecret = ApiKeys.FirebaseSecret,
             BasePath = ApiKeys.FirebasePath

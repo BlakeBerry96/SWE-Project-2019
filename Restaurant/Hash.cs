@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace Restaurant {
     internal class Hash {
-
         internal static string ComputeSha256Hash(string str) {
             str = salt(str);
  
