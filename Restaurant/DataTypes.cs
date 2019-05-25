@@ -29,7 +29,6 @@ namespace Restaurant {
         public string clockout { get; set; }
     }
 
-
     public class EmployeeDatabaseReturn {
         public Dictionary<string, Employee> Employees { get; set; }
     }
