@@ -1,6 +1,6 @@
-# SWE-Project-2019
+# Software Engineering Project Spring 2019
 
-Created for a Mississippi State software engineering project
+Created for a Mississippi State University software engineering project
 
 
 The Project was to make a piece of software to run a restaurant and have individual interfaces for the busboys, cooks, hosts, managers, and waiters
