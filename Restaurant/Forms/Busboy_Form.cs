@@ -1,53 +1,46 @@
-﻿using Restaurant.Employees;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant {
     public partial class Busboy_Form : Form {
         Button lastClicked = null;
-        Button lastChanged = null;
-        Busboy employee;
+        Table lastChanged;
+        User user;
 
-        public Busboy_Form(Busboy busboy) {
-            employee = busboy;
+        public Busboy_Form(User busboy) {
+            user = busboy;
             InitializeComponent();
-            InitialTableColor();
-            Username_Label.Text = "Logged in: " + employee.username;
+            this.Text = Helper.TitleText("Busboy", user);
+            backgroundWorker.RunWorkerAsync();
+            Clean_Label.ForeColor = Color.Green;
+            Dirty_Label.ForeColor = Color.Red;
 
             SendDumbyFocus();
         }
 
-        private void InitialTableColor() {
-            foreach (Control control in LayoutPanel.Controls) {
-                if (control is Button) {
-                    Button table = control as Button;
-                    table.BackColor = Color.Red;
-                    table.ForeColor = Color.White;
+        private async void Clean_Click(object sender, EventArgs e) {
+            if (lastClicked != null) {
+                var table_num = Helper.GetTableNumber(lastClicked);
+                if (table_num != 9) {
+                    lastChanged = await Helper.SetTableStatus(table_num, "clean");
+                    lastClicked = null;
+                    Undo_Button.Enabled = true;
                 }
             }
-        }
-
-        private void Clean_Button_Click(object sender, EventArgs e) {
-            if (lastClicked != null) {
-                ToggleColor(lastClicked);
-                lastChanged = lastClicked;
-                lastClicked = null;
-                Undo_Button.Enabled = true;
-            }
-
             SendDumbyFocus();
         }
 
-        private void Undo_Button_Click(object sender, EventArgs e) {
+        private async void Undo_Click(object sender, EventArgs e) {
             if (lastChanged != null) {
-                ToggleColor(lastChanged);
+                await Firebase.UpdateAsync<Table>("Tables", Helper.GetTableKey(lastChanged.table_number), lastChanged);
                 lastChanged = null;
                 lastClicked = null;
                 Undo_Button.Enabled = false;
@@ -55,7 +48,7 @@ namespace Restaurant {
             SendDumbyFocus();
         }
 
-        private void Logout_Button_Click(object sender, EventArgs e) {
+        private void Logout_Click(object sender, EventArgs e) {
             SendDumbyFocus();
 
             this.Close();
@@ -65,25 +58,34 @@ namespace Restaurant {
             DumbyFocus.Focus();
         }
 
-        private void Table_Button_Clicked(object sender, EventArgs e) {
+        private void Table_Click(object sender, EventArgs e) {
             Button tableButton = (sender as Button);
             if (tableButton.BackColor == Color.Red)
                 lastClicked = tableButton;
-        }
-
-        // Testing Method
-        private void ToggleColor(Button lastClicked) {
-            if (lastClicked.BackColor == Color.Red) {
-                lastClicked.BackColor = Color.Green;
-                lastClicked.ForeColor = Color.White;
-            } else {
-                lastClicked.BackColor = Color.Red;
-                lastClicked.ForeColor = Color.White;
+            else {
+                SendDumbyFocus();
+                lastClicked = null;
             }
         }
 
-        private void Table_Cleaner_DoWork(object sender, DoWorkEventArgs e) {
-            
+        private void Form_Closing(object sender, FormClosingEventArgs e) {
+            backgroundWorker.CancelAsync();
+        }
+
+        private async void Background_DoWork(object sender, DoWorkEventArgs e) {
+            try {
+                while (!backgroundWorker.CancellationPending) {
+                    TableDatabaseReturn tables;
+                    tables = await Firebase.GetAsync<TableDatabaseReturn>();
+                    Button b;
+
+                    foreach (var table in tables.Tables) {
+                        b = Helper.GetButton(LayoutPanel, table.Value.table_number);
+                        Helper.SetButton(b, table.Value.status, "dirty", Color.Red, Color.Green);
+                    }
+                    Thread.Sleep(TimeSpan.FromSeconds(2));
+                }
+            } catch (Exception) { }
         }
     }
 }

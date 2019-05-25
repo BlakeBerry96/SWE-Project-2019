@@ -25,16 +25,15 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cook_Form));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Order_List = new System.Windows.Forms.ListBox();
             this.Order_Textbox = new System.Windows.Forms.RichTextBox();
-            this.Order_List = new System.Windows.Forms.ListView();
             this.Cook_Label = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Ready_Button = new System.Windows.Forms.Button();
             this.Undo_Button = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.Logout_Button = new System.Windows.Forms.Button();
-            this.Order_Readier = new System.ComponentModel.BackgroundWorker();
-            this.Username_Label = new System.Windows.Forms.Label();
+            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -48,8 +47,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Controls.Add(this.Order_Textbox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Order_List, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Order_Textbox, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 64);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -57,6 +56,21 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 315F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 315);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // Order_List
+            // 
+            this.Order_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Order_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Order_List.FormattingEnabled = true;
+            this.Order_List.ItemHeight = 20;
+            this.Order_List.Location = new System.Drawing.Point(5, 5);
+            this.Order_List.Margin = new System.Windows.Forms.Padding(5, 5, 0, 0);
+            this.Order_List.Name = "Order_List";
+            this.Order_List.Size = new System.Drawing.Size(241, 304);
+            this.Order_List.TabIndex = 5;
+            this.Order_List.SelectedIndexChanged += new System.EventHandler(this.Order_List_Select_Change);
             // 
             // Order_Textbox
             // 
@@ -67,22 +81,10 @@
             this.Order_Textbox.Location = new System.Drawing.Point(251, 5);
             this.Order_Textbox.Margin = new System.Windows.Forms.Padding(5);
             this.Order_Textbox.Name = "Order_Textbox";
+            this.Order_Textbox.ReadOnly = true;
             this.Order_Textbox.Size = new System.Drawing.Size(564, 305);
             this.Order_Textbox.TabIndex = 0;
             this.Order_Textbox.Text = "";
-            // 
-            // Order_List
-            // 
-            this.Order_List.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Order_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order_List.Location = new System.Drawing.Point(5, 5);
-            this.Order_List.Margin = new System.Windows.Forms.Padding(5);
-            this.Order_List.Name = "Order_List";
-            this.Order_List.Size = new System.Drawing.Size(236, 305);
-            this.Order_List.TabIndex = 1;
-            this.Order_List.UseCompatibleStateImageBehavior = false;
             // 
             // Cook_Label
             // 
@@ -127,6 +129,7 @@
             this.Ready_Button.TabStop = false;
             this.Ready_Button.Text = "Ready";
             this.Ready_Button.UseVisualStyleBackColor = true;
+            this.Ready_Button.Click += new System.EventHandler(this.Ready_Click);
             // 
             // Undo_Button
             // 
@@ -143,6 +146,7 @@
             this.Undo_Button.TabStop = false;
             this.Undo_Button.Text = "↶";
             this.Undo_Button.UseVisualStyleBackColor = true;
+            this.Undo_Button.Click += new System.EventHandler(this.Undo_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -175,29 +179,17 @@
             this.Logout_Button.TabStop = false;
             this.Logout_Button.Text = "Logout";
             this.Logout_Button.UseVisualStyleBackColor = true;
+            this.Logout_Button.Click += new System.EventHandler(this.Logout_Click);
             // 
-            // Order_Readier
+            // backgroundWorker
             // 
-            this.Order_Readier.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Order_Readier_DoWork);
-            // 
-            // Username_Label
-            // 
-            this.Username_Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Username_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username_Label.Location = new System.Drawing.Point(17, 4);
-            this.Username_Label.Margin = new System.Windows.Forms.Padding(3, 100, 3, 0);
-            this.Username_Label.Name = "Username_Label";
-            this.Username_Label.Size = new System.Drawing.Size(810, 20);
-            this.Username_Label.TabIndex = 11;
-            this.Username_Label.Text = "Username";
-            this.Username_Label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.backgroundWorker.WorkerSupportsCancellation = true;
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Background_DoWork);
             // 
             // Cook_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(844, 481);
-            this.Controls.Add(this.Username_Label);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.Cook_Label);
@@ -209,6 +201,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cook";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Closing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -219,7 +212,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListView Order_List;
         private System.Windows.Forms.Label Cook_Label;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button Ready_Button;
@@ -227,7 +219,7 @@
         private System.Windows.Forms.RichTextBox Order_Textbox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button Logout_Button;
-        private System.ComponentModel.BackgroundWorker Order_Readier;
-        private System.Windows.Forms.Label Username_Label;
+        private System.Windows.Forms.ListBox Order_List;
+        private System.ComponentModel.BackgroundWorker backgroundWorker;
     }
 }
