@@ -1,4 +1,4 @@
-# Software Engineering Project Spring 2019
+# SSWE-Project-2019
 
 Created for a Mississippi State University software engineering project
 
